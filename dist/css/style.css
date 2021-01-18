@@ -3,12 +3,29 @@
   background-image: url("../img/bg-pattern.png"), linear-gradient(90deg, #dc2430 0%, #7b4397 100%);
 }
 
+.center {
+  justify-content: center;
+}
+
+.phone {
+  width: 100%;
+}
+
+.app-store {
+  width: 100%;
+}
+
 .stop {
   background-image: url("../img/bg-cta.jpg");
 }
 
+.stop-right {
+  text-align: right;
+}
+
 h1, h2, h3, h4, h5, h6 {
   font-family: "Catamaran", Helvetica, Arial, sans-serif;
+  text-align: center;
 }
 
 .yellow {
@@ -16,7 +33,25 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .dark {
-  background-color: #1d1c19;
+  background-color: #757471;
+}
+
+.row {
+  display: flex;
+}
+
+.card {
+  width: 100%;
+  padding: 1.5rem;
+}
+
+.nav-down {
+  text-align: center;
+  width: 100%;
+}
+
+.heart {
+  color: #ff0505;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/4edaf81216.js" crossorigin="anonymous"></script>
     <title>SCSS sitebuilding</title>
     <link rel="stylesheet" href="css/style-bem.css">
     <link rel="stylesheet" href="./css/grid.css">
@@ -35,8 +36,8 @@
     </nav>
 
     <section class="gradient">
-        <div class="container">
-            <div class="column--default-12  column--tablet-6">
+        <div class="container center">
+            <div class="column--default-12  column--tablet-5">
                 <section>
                     <p class="h3">
                         New Age is an app landing page that will help you beautifully showcase your new
@@ -45,25 +46,24 @@
                 </section>
                 <footer>
                     <a href="#" class="btn btn-outline-dark badge-pill">START NOW FOR FREE!</a>
-
                 </footer>
             </div>
-            <div class="column--default-12  column--tablet-6">
+            <div class="column--default-12  column--tablet-3">
                 <div class="">
-                    <img src="img/phone.png" alt="phone" class="w-100">
+                    <img src="img/phone.png" alt="phone" class="phone">
                 </div>
             </div>
         </div>
     </section>
 
     <section class="yellow" id="dow">
-        <div class="container">
-            <div class="column--default-12 column--tablet-12">
-                <div class="row justify-content-md-center column--default-12 column--tablet-6">
-                    <div class="col-5">
-                        <h1 class="text-center mb-5">Discover what all the buzz is about!</h1>
+        <div class="container center">
+            <div class="column--default-12 column--tablet-5">
+                <div class="">
+                    <div class="center">
+                        <h1 class="">Discover what all the buzz is about!</h1>
 
-                        <p class="text-center mb-5 text-small">Our app is available on any mobile device! Download now
+                        <p class="">Our app is available on any mobile device! Download now
                             to get
                             started!</p>
                     </div>
@@ -73,36 +73,69 @@
     </section>
 
     <section class="yellow">
-        <div class="container">
-            <div class="column--default-12 column--tablet-6">
+        <div class="container center">
+            <div class="column--default-12 column--tablet-2">
                 <a href="https://play.google.com"><img src="img/google-play-badge.svg" alt="google-play"></a>
             </div>
-            <div class="column--default-12 column--tablet-6">
+            <div class="column--default-12 column--tablet-2">
                 <a href="https://www.apple.com/hu/app-store/"><img src="img/app-store-badge.svg" alt="app-store"
-                        class="w-100"></a>
+                        class="app-store"></a>
             </div>
         </div>
     </section>
 
     <section id="fea">
-        <div class="container">
-            <div class="column--default-12 column--tablet-12">
-                <div class="column--default-12 column--tablet-6">
-                    <h1 class="">Unlimited Features, Unlimited Fun</h1>
-                    <h6 class="">Check out what you can do with this app theme!</h6>
-                    <h6 class="">______________</h6>
-                </div>
+        <div class="container center">
+            <div class="column--default-12 column--tablet-6">
+                <h1 class="">Unlimited Features, Unlimited Fun</h1>
+                <h6 class="">Check out what you can do with this app theme!</h6>
+                <h6 class="">______________</h6>
             </div>
         </div>
     </section>
 
     <section>
-        <div class="container">
-            <div class="column--default-12 column--tablet-4">
-                <img class=" w-100" src="img/phone.png" alt="">
+        <div class="container center">
+            <div class="column--default-12 column--tablet-3">
+                <img class="phone" src="img/phone.png" alt="">
             </div>
-            <div class="column--default-12 column--tablet-4">
-                4 cards
+            <div class="column--default-12 column--tablet-6">
+                <div class="row">
+                    <div class="card column--default-12 column--tablet-3">
+                        <div class="card-header">&#128241;</div>
+                        <div class="card-body">
+                            <h5 class="card-title">Device Mockups</h5>
+                            <p class="card-text">Ready to use HTML/CSS device mockups, no Photoshop required!
+                            </p>
+                        </div>
+                    </div>
+                    <div class="card column--default-12 column--tablet-3">
+                        <div class="card-header">&#128241;</div>
+                        <div class="card-body">
+                            <h5 class="card-title">Flexible Use</h5>
+                            <p class="card-text">Put an image, video, animation, or anything else in the screen!
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="card column--default-12 column--tablet-3">
+                        <div class="card-header">&#128241;</div>
+                        <div class="card-body">
+                            <h5 class="card-title">Free to Use</h5>
+                            <p class="card-text">As always, this theme is free to download and use for any
+                                purpose!</p>
+                        </div>
+                    </div>
+                    <div class="card column--default-12 column--tablet-3">
+                        <div class="card-header">&#128241;</div>
+                        <div class="card-body">
+                            <h5 class="card-title">Open Source</h5>
+                            <p class="card-text">Since this theme is MIT licensed, you can use it commercially!
+                            </p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -111,11 +144,11 @@
         <div class="container">
             <div class="column--default-12 column--tablet-6">
                 <div class="">
-                    <section class="text-right">
+                    <section class="stop-right">
                         <p class="h1">Stop waiting.</p>
                         <p class="h1">Start building.</p>
                     </section>
-                    <footer class="text-right">
+                    <footer class="stop-right">
                         <a href="#" class="btn">LET'S GET STARTED !</a>
                     </footer>
                 </div>
@@ -124,13 +157,13 @@
     </section>
 
     <section class="yellow" id="con">
-        <div class="container">
+        <div class="container center">
             <div class="column--default-12 column--tablet-6">
                 <div class="">
                     <h5 class="">
-                        We <i class="fa fa-heart text-danger"></i> friends!
+                        We <i class="heart fa fa-heart text-danger"></i> friends!
                     </h5>
-                    <nav class="">
+                    <nav class="column--default-12 column--tablet-6 nav-down">
                         <a href="https://twitter.com/?lang=hu" class="" data-toggle="tooltip" data-placement="top"
                             title="twitter">
                             <i class="fab fa-twitter fa-3x" aria-hidden="true"></i>
@@ -153,7 +186,7 @@
     </section>
 
     <footer class="dark">
-        <div class="container">
+        <div class="container center">
             <div class="column--default-12 column--tablet-4">
 
                 <div class="">
