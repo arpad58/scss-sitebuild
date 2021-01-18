@@ -1,0 +1,27 @@
+/*  media query-k, azaz az adott töréspontokhoz tartozó mediaqueryk
+azaz mobilhoz, tablethez és desktophoz  .
+Mobilefirst szemléletmódot fogunk figyelembevenni*/
+
+// mobil töréspont felett
+@mixin mobile-up {
+    @media only screen and (min-width: var(grid-breakpoint-mobile)) {
+        @content;
+    }   // ide a configban lévő mobilos töréspontnak az értéke kell azaz a 640px. Azomban nekünk ezt az értéket ki kell szednünk, ezt függvénnyel kell megtenni.
+}
+
+
+// tablet töréspont felett
+@mixin tablet-up {
+    @media only screen and (min-width: var(grid-breakpoint-tablet)) {
+        @content;
+    }
+}
+
+// desktop töréspont felett
+@mixin desktop-up {
+    @media only screen and (min-width: var(grid-breakpoint-desktop)) {
+        @content;
+    }
+}
+
+

@@ -1,0 +1,8 @@
+/* Ide a _functions.scss -be fogjuk az össze függvényekkel kapcsolatos fájlt,
+tehát ami a functions mappában lesz összes fájlt be fogjuk importálni.ide.
+*/
+
+@import 'get-keys';
+@import 'var';
+@import 'get-column-width';
+@import 'convert-string-to-number';

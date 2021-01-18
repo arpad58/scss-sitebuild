@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+
+.gradient{
+    background-image: url('../img/bg-pattern.png'), 
+    linear-gradient(90deg, rgb(220, 36, 48) 0%, rgb(123, 67, 151) 100%);  
+}
+
+.stop {
+    background-image: url('../img/bg-cta.jpg'); 
+       
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Catamaran', Helvetica, Arial, sans-serif;
+}
+
+.yellow {
+    background-color: #f3c910;
+} 
+
+.dark {
+    background-color: #1d1c19; 
+}

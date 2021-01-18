@@ -1,0 +1,339 @@
+@charset "UTF-8";
+/* Ide a _variables.scss-be be fogjuk importálni az össze olyan fájlt,
+ ami a variables mappában lesz létrehozva.
+*/
+/* Ezzel a config fájllal a teljes rácsrendszerünket amit le fogunk generáltatni, 
+ezzel testre tudjuk szabni .
+Tehát beállítottuk:
+- a gridnél asize-t, hogy hány oszlop széles legyen a grid, milyen töréspontjaink legyenek,
+
+- beállítottunk a containernél egy default clssnamet, egy max szélességet, hogy
+  képernyőn 1280 px lesz a containernek a max szélessége,
+  ezen belül hozzuk létre az oszlopokat, 
+- paddingek mindenegyes töréspontra, alpban(default) a mobilos töréspont alatt,
+  mobilos törésponttól tablet illetve desktoptól 
+
+  - ugyanigy az oszlopoknál van egy classname, ez a clssname lesz felhasználva a column classnamek legenerálásánál.
+  -  postfixek, ezeket is megadtuk egy stringgel adott töréspontokhoz,
+  - megadtuk a padding értékeket ugyanugy mint a containernél , */
+/* Ide a _mixins.scss -be fogjuk importálni az össze olyan fájlt,
+ ami a mixins mappában lesz létrehozva.
+*/
+/*  media query-k, azaz az adott töréspontokhoz tartozó mediaqueryk
+azaz mobilhoz, tablethez és desktophoz  .
+Mobilefirst szemléletmódot fogunk figyelembevenni*/
+/* Ide a _functions.scss -be fogjuk az össze függvényekkel kapcsolatos fájlt,
+tehát ami a functions mappában lesz összes fájlt be fogjuk importálni.ide.
+*/
+.container {
+  box-sizing: border-box;
+  display: flex;
+  flex: 0 1 auto;
+  flex-flow: row wrap;
+  margin: 0 auto;
+  padding: 5px;
+  position: relative;
+  max-width: 1280px;
+}
+@media only screen and (min-width: 640px) {
+  .container {
+    padding: 6px;
+  }
+}
+@media only screen and (min-width: 960px) {
+  .container {
+    padding: 7.5px;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  .container {
+    padding: 9px;
+  }
+}
+
+.container > [class^=column] {
+  box-sizing: border-box;
+  padding: 10px;
+  position: relative;
+}
+@media only screen and (min-width: 640px) {
+  .container > [class^=column] {
+    padding: 12px;
+  }
+}
+@media only screen and (min-width: 960px) {
+  .container > [class^=column] {
+    padding: 15px;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  .container > [class^=column] {
+    padding: 18px;
+  }
+}
+
+.column--default-1 {
+  width: 8.3333333333%;
+}
+
+.column--default-2 {
+  width: 16.6666666667%;
+}
+
+.column--default-3 {
+  width: 25%;
+}
+
+.column--default-4 {
+  width: 33.3333333333%;
+}
+
+.column--default-5 {
+  width: 41.6666666667%;
+}
+
+.column--default-6 {
+  width: 50%;
+}
+
+.column--default-7 {
+  width: 58.3333333333%;
+}
+
+.column--default-8 {
+  width: 66.6666666667%;
+}
+
+.column--default-9 {
+  width: 75%;
+}
+
+.column--default-10 {
+  width: 83.3333333333%;
+}
+
+.column--default-11 {
+  width: 91.6666666667%;
+}
+
+.column--default-12 {
+  width: 100%;
+}
+
+@media only screen and (min-width: 640px) {
+  .column--mobile-1 {
+    width: 8.3333333333%;
+  }
+}
+
+@media only screen and (min-width: 640px) {
+  .column--mobile-2 {
+    width: 16.6666666667%;
+  }
+}
+
+@media only screen and (min-width: 640px) {
+  .column--mobile-3 {
+    width: 25%;
+  }
+}
+
+@media only screen and (min-width: 640px) {
+  .column--mobile-4 {
+    width: 33.3333333333%;
+  }
+}
+
+@media only screen and (min-width: 640px) {
+  .column--mobile-5 {
+    width: 41.6666666667%;
+  }
+}
+
+@media only screen and (min-width: 640px) {
+  .column--mobile-6 {
+    width: 50%;
+  }
+}
+
+@media only screen and (min-width: 640px) {
+  .column--mobile-7 {
+    width: 58.3333333333%;
+  }
+}
+
+@media only screen and (min-width: 640px) {
+  .column--mobile-8 {
+    width: 66.6666666667%;
+  }
+}
+
+@media only screen and (min-width: 640px) {
+  .column--mobile-9 {
+    width: 75%;
+  }
+}
+
+@media only screen and (min-width: 640px) {
+  .column--mobile-10 {
+    width: 83.3333333333%;
+  }
+}
+
+@media only screen and (min-width: 640px) {
+  .column--mobile-11 {
+    width: 91.6666666667%;
+  }
+}
+
+@media only screen and (min-width: 640px) {
+  .column--mobile-12 {
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 960px) {
+  .column--tablet-1 {
+    width: 8.3333333333%;
+  }
+}
+
+@media only screen and (min-width: 960px) {
+  .column--tablet-2 {
+    width: 16.6666666667%;
+  }
+}
+
+@media only screen and (min-width: 960px) {
+  .column--tablet-3 {
+    width: 25%;
+  }
+}
+
+@media only screen and (min-width: 960px) {
+  .column--tablet-4 {
+    width: 33.3333333333%;
+  }
+}
+
+@media only screen and (min-width: 960px) {
+  .column--tablet-5 {
+    width: 41.6666666667%;
+  }
+}
+
+@media only screen and (min-width: 960px) {
+  .column--tablet-6 {
+    width: 50%;
+  }
+}
+
+@media only screen and (min-width: 960px) {
+  .column--tablet-7 {
+    width: 58.3333333333%;
+  }
+}
+
+@media only screen and (min-width: 960px) {
+  .column--tablet-8 {
+    width: 66.6666666667%;
+  }
+}
+
+@media only screen and (min-width: 960px) {
+  .column--tablet-9 {
+    width: 75%;
+  }
+}
+
+@media only screen and (min-width: 960px) {
+  .column--tablet-10 {
+    width: 83.3333333333%;
+  }
+}
+
+@media only screen and (min-width: 960px) {
+  .column--tablet-11 {
+    width: 91.6666666667%;
+  }
+}
+
+@media only screen and (min-width: 960px) {
+  .column--tablet-12 {
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .column--desktop-1 {
+    width: 8.3333333333%;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .column--desktop-2 {
+    width: 16.6666666667%;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .column--desktop-3 {
+    width: 25%;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .column--desktop-4 {
+    width: 33.3333333333%;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .column--desktop-5 {
+    width: 41.6666666667%;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .column--desktop-6 {
+    width: 50%;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .column--desktop-7 {
+    width: 58.3333333333%;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .column--desktop-8 {
+    width: 66.6666666667%;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .column--desktop-9 {
+    width: 75%;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .column--desktop-10 {
+    width: 83.3333333333%;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .column--desktop-11 {
+    width: 91.6666666667%;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .column--desktop-12 {
+    width: 100%;
+  }
+}
+
+/*# sourceMappingURL=grid.css.map */

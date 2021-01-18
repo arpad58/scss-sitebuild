@@ -1,0 +1,6 @@
+/* Ide a _modules.scss-be be fogjuk importálni az össze olyan fájlt,
+ ami a modules mappában lesz létrehozva.
+*/
+
+@forward 'colors';
+@forward 'normalize';

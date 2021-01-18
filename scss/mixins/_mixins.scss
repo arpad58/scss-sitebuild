@@ -1,0 +1,9 @@
+/* Ide a _mixins.scss -be fogjuk importálni az össze olyan fájlt,
+ ami a mixins mappában lesz létrehozva.
+*/
+
+@import 'breakpoint';
+@import 'generate-container';
+@import 'column-default-style';
+@import 'set-column-width';
+@import 'generate-columns';

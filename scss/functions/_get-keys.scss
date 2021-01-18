@@ -1,0 +1,24 @@
+
+
+@function get-keys($string, $separator: "-") {
+    $keys: ();
+    //$index: string.index($string, $separator);  ez helyett a következő
+    $index: str-index($string, $separator);
+    // theme-material-red
+    // material-red
+    // red
+    @while $index {
+        //$key: string.slice($string, 1, $index - 1);  ez helyett a következő
+        $key: str-slice($string, 1, $index - 1);
+        //$keys: list.append($keys, $key);       ez helyett a következő
+        $keys: append($keys, $key);
+        $string: str-slice($string, $index + 1);
+        //$index: string.index($string, $separator); ez helyett a következő
+        $index: str-index($string, $separator);
+    }
+    //$keys: list.append($keys, $string);  ez helyett a következő
+    $keys: append($keys, $string);
+    @return $keys;
+}
+
+;

@@ -4,11 +4,184 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>scss sitebuild</title>
+    <title>SCSS sitebuilding</title>
+    <link rel="stylesheet" href="css/style-bem.css">
+    <link rel="stylesheet" href="./css/grid.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-    
+
+    <nav class="nav">
+        <div class="nav__container">
+            <label class="nav__hamburger-label" for="menu">
+                <span class="nav__hamburger-line"></span>
+                <span class="nav__hamburger-line"></span>
+                <span class="nav__hamburger-line"></span>
+            </label>
+            <input class="nav__hamburger-checkbox" type="checkbox" id="menu">
+            <ul class="nav__list">
+                <li class="nav__item">
+                    <a class="nav__link" href="#dow">DOWNLOAD</a>
+                </li>
+                <li class="nav__item">
+                    <a class="nav__link" href="#fea">FEATURES</a>
+                </li>
+                <li class="nav__item">
+                    <a class="nav__link" href="#con">CONTACT</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="gradient">
+        <div class="container">
+            <div class="column--default-12  column--tablet-6">
+                <section>
+                    <p class="h3">
+                        New Age is an app landing page that will help you beautifully showcase your new
+                        mobile app, or anything else!
+                    </p>
+                </section>
+                <footer>
+                    <a href="#" class="btn btn-outline-dark badge-pill">START NOW FOR FREE!</a>
+
+                </footer>
+            </div>
+            <div class="column--default-12  column--tablet-6">
+                <div class="">
+                    <img src="img/phone.png" alt="phone" class="w-100">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="yellow" id="dow">
+        <div class="container">
+            <div class="column--default-12 column--tablet-12">
+                <div class="row justify-content-md-center column--default-12 column--tablet-6">
+                    <div class="col-5">
+                        <h1 class="text-center mb-5">Discover what all the buzz is about!</h1>
+
+                        <p class="text-center mb-5 text-small">Our app is available on any mobile device! Download now
+                            to get
+                            started!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="yellow">
+        <div class="container">
+            <div class="column--default-12 column--tablet-6">
+                <a href="https://play.google.com"><img src="img/google-play-badge.svg" alt="google-play"></a>
+            </div>
+            <div class="column--default-12 column--tablet-6">
+                <a href="https://www.apple.com/hu/app-store/"><img src="img/app-store-badge.svg" alt="app-store"
+                        class="w-100"></a>
+            </div>
+        </div>
+    </section>
+
+    <section id="fea">
+        <div class="container">
+            <div class="column--default-12 column--tablet-12">
+                <div class="column--default-12 column--tablet-6">
+                    <h1 class="">Unlimited Features, Unlimited Fun</h1>
+                    <h6 class="">Check out what you can do with this app theme!</h6>
+                    <h6 class="">______________</h6>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <div class="column--default-12 column--tablet-4">
+                <img class=" w-100" src="img/phone.png" alt="">
+            </div>
+            <div class="column--default-12 column--tablet-4">
+                4 cards
+            </div>
+        </div>
+    </section>
+
+    <section class="stop">
+        <div class="container">
+            <div class="column--default-12 column--tablet-6">
+                <div class="">
+                    <section class="text-right">
+                        <p class="h1">Stop waiting.</p>
+                        <p class="h1">Start building.</p>
+                    </section>
+                    <footer class="text-right">
+                        <a href="#" class="btn">LET'S GET STARTED !</a>
+                    </footer>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="yellow" id="con">
+        <div class="container">
+            <div class="column--default-12 column--tablet-6">
+                <div class="">
+                    <h5 class="">
+                        We <i class="fa fa-heart text-danger"></i> friends!
+                    </h5>
+                    <nav class="">
+                        <a href="https://twitter.com/?lang=hu" class="" data-toggle="tooltip" data-placement="top"
+                            title="twitter">
+                            <i class="fab fa-twitter fa-3x" aria-hidden="true"></i>
+                            <span class="sr-only">twitter</span>
+                        </a>
+                        <a href="https://www.facebook.com" class="text-white mr-2" data-toggle="tooltip"
+                            data-placement="top" title="facebook">
+                            <i class="fab fa-facebook fa-3x" aria-hidden="true"></i>
+                            <span class="sr-only">facebook</span>
+                        </a>
+                        <a href="https://www.google.com/" class="text-white" data-toggle="tooltip" data-placement="top"
+                            title="google plus">
+                            <i class="fab fa-google-plus fa-3x" aria-hidden="true"></i>
+                            <span class="sr-only">google plus</span>
+                        </a>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="dark">
+        <div class="container">
+            <div class="column--default-12 column--tablet-4">
+
+                <div class="">
+                    <address class="">
+                        &copy; Your Website 2018. All Rights Reserved
+                    </address>
+                    <nav class="">
+                        <a href="#" class="" title="Privacy">
+                            Privacy
+                            <span class="sr-only">Privacy</span>
+                        </a>
+                        <a href="#" class="" title="Terms">
+                            Terms
+                            <span class="sr-only">Terms</span>
+                        </a>
+                        <a href="#" class="" title="FAQ">
+                            FAQ
+                            <span class="sr-only">FAQ</span>
+                        </a>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+
 </body>
 
 </html>

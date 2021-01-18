@@ -1,0 +1,14 @@
+
+
+@function var($string, $data: $config) {     //colors.$colors  helyett $config, ugyanis a függvényünk majd fel tudja használni az előzőleg beimportált fájlok tartalmát, tehát a komplett variableshez is hozzá fog férni. É mivel a variablesben a config fájl be van húzva, ezért ezt a config változót globálisan elérjük itt a var-on belül..
+    $keys: get-keys($string);
+
+    @each $key in $keys {
+     
+        //$data: map.get($data, $key);  ez helyrtt a következő
+        $data: map-get($data, $key);
+    }
+    @return $data;
+}
+
+// MIvel a két függvényt használni akarom, ezért a _functions.scss fájlba az @import rule segitségével ezt a két függvényt be fkell importálni.

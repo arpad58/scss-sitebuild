@@ -1,0 +1,53 @@
+$config: (   // Ez a config változó egy map amin belül lesznek map-ek
+   grid: (    // grid map
+       size: 12,   // Hány darab oszlop lehet 1 sorban, vagyis hány oszlop széles lehet 1 sor
+       breakpoint: (   // töréspontok ez is egy map
+           mobile: 640px,  //  Mivel importot használunk, ezért px és nem rem
+           tablet: 960px,
+           desktop: 1280px
+       )
+   ),
+   container: (
+       classname: container,   // Ezt a classname-t fogom használni amikor a containert legeneráltatom
+       maxWidth: 1280px,    // Maximum szélesség
+       padding: (
+           default: 5px,  // ez lesz a mobil töréspont 640px alatti, hány px padding legyen a container "körül"
+           mobile: 6px,   // 640px-től 960-ig
+           tablet: 7.5px,  //  960 -tól  1280-ig
+           desktop: 9px    //  1280 felett
+       )
+   ),
+   column: (
+       classname: column,
+       postfix: (
+          default: default,  // column--default-12 azaz ilyen classname-t fogunk majd legenerálni. Ezzel a classname-val rendelkező elem a teljes sort ki fogja tölteni, mivel egy sorban maximum 12 oszlop széles elem legyen, ez pedig 12 oszlop széles lesz. 
+          mobile: mobile,    // column--mobile-6  Ezen vlassu elemből 2 fér el egymás mellett
+          // Ha megadjuk egy elemnek a fenti mindkét classnamet, akkor mobil töréspont alatt 640px alatt a teljes sort ki fogja tölteni, a 640pxea töréspont felett már csak az 50 %át tölti ki a sornak, tehát 2 ilyen elem egymás melléfog kerülni.
+          tablet: tablet,    // column--tablet-4   ami azt jelenti, hogy mindegyik elem 33.33% széles lesz. A 960-as törésponttól kezdve 3 elem fér el egymás mellett.
+          desktop: desktop   // column--desktop-3   ami azt jelenti, hogy 4 ilyen elem fog egymás mellékerülni. 
+       ),
+       padding: (
+           default: 10px,
+           mobile: 12px,
+           tablet: 15px,
+           desktop: 18px
+       )
+   )
+);
+
+/* Ezzel a config fájllal a teljes rácsrendszerünket amit le fogunk generáltatni, 
+ezzel testre tudjuk szabni .
+Tehát beállítottuk:
+- a gridnél asize-t, hogy hány oszlop széles legyen a grid, milyen töréspontjaink legyenek,
+
+- beállítottunk a containernél egy default clssnamet, egy max szélességet, hogy
+  képernyőn 1280 px lesz a containernek a max szélessége,
+  ezen belül hozzuk létre az oszlopokat, 
+- paddingek mindenegyes töréspontra, alpban(default) a mobilos töréspont alatt,
+  mobilos törésponttól tablet illetve desktoptól 
+  
+  - ugyanigy az oszlopoknál van egy classname, ez a clssname lesz felhasználva a column classnamek legenerálásánál.
+  -  postfixek, ezeket is megadtuk egy stringgel adott töréspontokhoz,
+  - megadtuk a padding értékeket ugyanugy mint a containernél , */
+
+  // Ha ez megvan akkor ezt a fájlt a _variables.scss -be huzzuk is be az import utasitas segutségével.
